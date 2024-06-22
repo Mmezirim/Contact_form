@@ -1,0 +1,28 @@
+{
+  "name": "web3bridge-test",
+  "version": "1.0.0",
+  "description": "contact form",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mmezirim/Contact_form.git"
+  },
+  "keywords": [
+    "Form"
+  ],
+  "author": "Chimmezirim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mmezirim/Contact_form/issues"
+  },
+  "homepage": "https://github.com/Mmezirim/Contact_form#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "fs": "^0.0.1-security"
+  },
+  "devDependencies": {}
+}
