@@ -1,6 +1,7 @@
 const express = require('express');
 const fs = require('fs');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+const { isUtf8 } = require('buffer');
 const app = express();
 
 
@@ -15,14 +16,23 @@ app.get('/', (req, res)=>{
 })
 app.post('/newContact', async(req, res)=>{
     try{
-        const data = await fs.promises.readFile('data.json')
+        const data = reg.body
         const add = JSON.parse(data);
-        await fs.promises.writeFile('data.json', JSON.stringify([req.body], null))
+        await fs.promises.writeFile('data.json', JSON.stringify(add, null, 4))
         res.status(200).send('Contact saved successfully')
     }catch(err){
-        console.log('Error saving data')
+        if(err){
+        await fs.promises.writeFile('data.json', JSON.stringify([req.body], null, 4))
+        res.status(200).send('Contact saved successfully')
+        }else{
+            res.status(400).json('Error saving data')
+        }
+        
     }
-})
+}) 
+app.get('/contacts', (req, res)=>{
+    res.render('contacts', {data})
+})  
 
 const port = 8080
 app.listen(port, (req, res)=>{
