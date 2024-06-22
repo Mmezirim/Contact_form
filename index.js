@@ -20,7 +20,7 @@ app.post('/newContact', async(req, res)=>{
         await fs.promises.writeFile('data.json', JSON.stringify([req.body], null))
         res.status(200).send('Contact saved successfully')
     }catch(err){
-
+        console.log('Error saving data')
     }
 })
 
