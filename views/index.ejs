@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            Add new contact information
+        </h1>
+        <form action="/newContact" method="POST">
+            <label for="name">Name</label>
+            <input class="form-input" type="text" name="name" required>
+            <label for="email">Email</label>
+            <input class="form-input" type="text" name="email" required>
+            <label for="phone">Phone</label>
+            <input class="form-input" type="text" name="phone" required>
+            <button type="submit">Create contact</button>
+        </form>
+    </div>
+</body>
+</html>
