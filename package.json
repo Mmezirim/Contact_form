@@ -21,8 +21,8 @@
   "homepage": "https://github.com/Mmezirim/Contact_form#readme",
   "dependencies": {
     "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
     "express": "^4.19.2",
     "fs": "^0.0.1-security"
-  },
-  "devDependencies": {}
+  }
 }
